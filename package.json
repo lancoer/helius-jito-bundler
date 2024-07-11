@@ -2,10 +2,28 @@
   "name": "helius-jito-bundler",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "ts-node heliusJitoBundler.ts",
+    "eslint": "eslint heliusJitoBundler.ts",
+    "lint": "./node_modules/eslint/bin/eslint.js  src --ext .ts",
+    "fix-lint": "./node_modules/eslint/bin/eslint.js  src --ext .ts --fix"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/js": "^9.6.0",
+    "@types/bs58": "^4.0.4",
+    "@types/node": "^20.14.10",
+    "@typescript-eslint/eslint-plugin": "^7.16.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "@solana/spl-memo": "^0.2.5",
+    "@solana/web3.js": "^1.95.0",
+    "dotenv": "^16.4.5",
+    "helius-sdk": "^1.0.15"
+  }
 }
